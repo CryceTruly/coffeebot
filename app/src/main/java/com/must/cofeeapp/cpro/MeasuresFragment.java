@@ -19,7 +19,6 @@ public class MeasuresFragment extends Fragment {
 
 
     public MeasuresFragment() {
-        // Required empty public constructor
     }
 
 

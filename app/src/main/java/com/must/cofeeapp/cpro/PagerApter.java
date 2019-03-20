@@ -21,14 +21,9 @@ public class PagerApter extends FragmentPagerAdapter {
 
                 case 2:
                     return new MeasuresFragment();
-
-
-
-
                 default:
                     return null;
             }
-
 
         }
 

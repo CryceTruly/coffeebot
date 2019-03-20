@@ -56,14 +56,10 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         mSearchParam = (EditText) findViewById(R.id.search);
         mListView =  findViewById(R.id.listView);
-        Log.d(TAG, "onCreate: started.");
         ImageView close=findViewById(R.id.closewin);
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getBaseContext(),HomeActivity.class));
-                finish();
-            }
+        close.setOnClickListener(view -> {
+            startActivity(new Intent(getBaseContext(),HomeActivity.class));
+            finish();
         });
         progresss = findViewById(R.id.progresss);
 
@@ -89,19 +85,16 @@ public class SearchActivity extends AppCompatActivity {
             return false;
         });
 
-        seachimage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String searchText = Handy.getTrimmedName(mSearchParam.getText().toString().trim());
-                if (!TextUtils.isEmpty(searchText)) {
-                    progresss.setVisibility(View.VISIBLE);
-                    firebaseUserSearch(Handy.capitalize(searchText));
+        seachimage.setOnClickListener(view -> {
+            String searchText = Handy.getTrimmedName(mSearchParam.getText().toString().trim());
+            if (!TextUtils.isEmpty(searchText)) {
+                progresss.setVisibility(View.VISIBLE);
+                firebaseUserSearch(Handy.capitalize(searchText));
 
-                } else {
-                    Toast.makeText(mContext, "Type a disease", Toast.LENGTH_SHORT).show();
-                }
-
+            } else {
+                Toast.makeText(mContext, "Type a disease", Toast.LENGTH_SHORT).show();
             }
+
         });
 
     }
@@ -246,7 +239,7 @@ public void setPhoto(Context context,String photo){
    try {
        Glide.with(context).load(photo).into(us_image);
    }catch (Exception e){
-       Log.d(TAG, "setPhoto: error");
+
    }
 }
 

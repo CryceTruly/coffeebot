@@ -35,9 +35,10 @@ public class MainActivity  extends AppIntro {
         };
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest.
-        addSlide(AppIntroFragment.newInstance(headings[0], descriptions[0], slideImages[0],Color.parseColor("#128C7E")));
-        addSlide(AppIntroFragment.newInstance(headings[1], descriptions[1], slideImages[1],Color.parseColor("#12ae4d")));
-        addSlide(AppIntroFragment.newInstance(headings[2], descriptions[2], slideImages[2],Color.parseColor("#34B7F1")));
+        addSlide(AppIntroFragment.newInstance(headings[0], descriptions[0], slideImages[0],Color.parseColor("#2e7d32")));
+        addSlide(AppIntroFragment.newInstance(headings[1], descriptions[1], slideImages[1],Color.parseColor("#005005")));
+        addSlide(AppIntroFragment.newInstance(headings[2], descriptions[2], slideImages[2],Color.parseColor("#60ad5e")));
+
 
 
 

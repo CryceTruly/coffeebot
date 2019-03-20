@@ -35,7 +35,7 @@ public class GalleryFragment extends Fragment {
 
     Query query;
     public GalleryFragment() {
-        // Required empty public constructor
+
     }
 
 

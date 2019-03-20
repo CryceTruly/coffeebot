@@ -43,11 +43,4 @@ public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
 
 
 
-    /**
-     * Converting dp to pixel
-     */
-    private int dpToPx(int dp,Context context) {
-        Resources r = context.getResources();
-        return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
-    }
 }
